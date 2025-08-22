@@ -1,0 +1,353 @@
+'use client'
+
+import { motion } from 'framer-motion'
+import Image from 'next/image'
+
+export default function About() {
+  const qualifications = [
+    {
+      title: "Ph.D. in Clinical Psychology",
+      institution: "Stanford University",
+      year: "2018",
+      description: "Specialized in cognitive behavioral therapy and neuropsychology"
+    },
+    {
+      title: "Licensed Clinical Psychologist",
+      institution: "California Board of Psychology",
+      year: "2019",
+      description: "License #PSY12345 - Active and in good standing"
+    },
+    {
+      title: "Certified Trauma Specialist",
+      institution: "International Society for Traumatic Stress Studies",
+      year: "2020",
+      description: "Advanced certification in trauma-informed therapy"
+    },
+    {
+      title: "Mindfulness-Based Therapy Certification",
+      institution: "Center for Mindfulness",
+      year: "2021",
+      description: "Specialized training in mindfulness-based interventions"
+    }
+  ]
+
+  const values = [
+    {
+      icon: "🧠",
+      title: "Evidence-Based Practice",
+      description: "All therapeutic approaches are grounded in scientific research and proven methodologies."
+    },
+    {
+      icon: "🤝",
+      title: "Compassionate Care",
+      description: "Every client receives personalized attention in a safe, non-judgmental environment."
+    },
+    {
+      icon: "🌱",
+      title: "Holistic Growth",
+      description: "Focus on mental, emotional, and spiritual well-being for complete healing."
+    },
+    {
+      icon: "🎯",
+      title: "Goal-Oriented Therapy",
+      description: "Collaborative treatment planning with clear, measurable outcomes."
+    }
+  ]
+
+  const specialties = [
+    "Anxiety & Depression",
+    "Trauma & PTSD",
+    "Relationship Issues",
+    "Stress Management",
+    "Life Transitions",
+    "Mindfulness Training"
+  ]
+
+  return (
+    <div className="relative min-h-screen overflow-hidden py-16 sm:py-20 lg:py-24">
+      {/* Same gradient background as Hero */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0D0D0D] via-[#1a0a1a] to-[#0a0a1a]"></div>
+        <div className="absolute inset-0 bg-gradient-to-tr from-[#D72638]/5 via-transparent to-[#00A6FB]/5"></div>
+        <div className="absolute inset-0 bg-gradient-to-bl from-[#FF5DA2]/3 via-transparent to-[#FF9F1C]/3"></div>
+        
+        {/* Animated gradient orbs */}
+        <motion.div 
+          className="absolute top-1/4 left-1/4 w-32 h-32 xs:w-40 xs:h-40 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96 bg-gradient-radial from-[#D72638]/10 to-transparent rounded-full blur-2xl sm:blur-3xl"
+          animate={{ 
+            scale: [1, 1.2, 1],
+            opacity: [0.3, 0.6, 0.3]
+          }}
+          transition={{ 
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        <motion.div 
+          className="absolute bottom-1/4 right-1/4 w-32 h-32 xs:w-40 xs:h-40 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96 bg-gradient-radial from-[#00A6FB]/10 to-transparent rounded-full blur-2xl sm:blur-3xl"
+          animate={{ 
+            scale: [1.2, 1, 1.2],
+            opacity: [0.6, 0.3, 0.6]
+          }}
+          transition={{ 
+            duration: 10,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-3 xs:px-4 sm:px-6 lg:px-8">
+        
+        {/* Header */}
+        <motion.div
+          className="text-center mb-12 sm:mb-16 lg:mb-20"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 xs:mb-6 sm:mb-8">
+            <span className="bg-gradient-to-r from-[#00A6FB] via-[#FF5DA2] to-[#D72638] bg-clip-text text-transparent">
+              About Me
+            </span>
+          </h1>
+          <p className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl text-[#F5F5F5]/80 max-w-4xl mx-auto leading-relaxed px-2 sm:px-0">
+            Dedicated to empowering minds and transforming lives through 
+            <span className="bg-gradient-to-r from-[#FF5DA2] to-[#00A6FB] bg-clip-text text-transparent font-medium"> evidence-based psychology</span>
+          </p>
+        </motion.div>
+
+        {/* Biography Section */}
+        <motion.div
+          className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center mb-16 sm:mb-20 lg:mb-24"
+          initial={{ opacity: 0, x: -30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+        >
+          <div className="order-2 lg:order-1">
+            <motion.h2
+              className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 xs:mb-6 sm:mb-8"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              <span className="bg-gradient-to-r from-[#FF9F1C] to-[#D72638] bg-clip-text text-transparent">
+                My Journey
+              </span>
+            </motion.h2>
+            
+            <motion.div
+              className="space-y-4 xs:space-y-6 sm:space-y-8 text-sm xs:text-base sm:text-lg lg:text-xl text-[#F5F5F5]/90 leading-relaxed"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+            >
+              <p>
+                With over 15 years of experience in clinical psychology, I've dedicated my career to understanding the intricate workings of the human mind. My passion for mental health began during my undergraduate studies, where I witnessed firsthand the transformative power of psychological intervention.
+              </p>
+              
+              <p>
+                Throughout my practice, I've worked with diverse populations, from adolescents navigating life transitions to adults overcoming trauma and depression. My approach combines <span className="text-[#FF5DA2] font-medium">traditional therapeutic methods</span> with innovative mindfulness-based techniques.
+              </p>
+              
+              <p>
+                I believe that every individual possesses an innate capacity for healing and growth. My role is to provide the tools, support, and safe space necessary for that transformation to unfold naturally.
+              </p>
+            </motion.div>
+          </div>
+
+          <motion.div
+            className="order-1 lg:order-2 flex justify-center"
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          >
+            <div className="relative">
+              <div className="w-64 h-64 xs:w-72 xs:h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-80 lg:h-80 xl:w-96 xl:h-96 bg-gradient-to-br from-[#D72638]/20 via-[#FF5DA2]/20 to-[#00A6FB]/20 rounded-3xl backdrop-blur-sm border border-[#F5F5F5]/10 flex items-center justify-center relative overflow-hidden">
+                {/* Placeholder for doctor image */}
+                <div className="w-full h-full bg-gradient-to-br from-[#FF5DA2]/30 to-[#00A6FB]/30 rounded-3xl flex items-center justify-center">
+                  <div className="text-6xl xs:text-7xl sm:text-8xl lg:text-9xl">👩‍⚕️</div>
+                </div>
+                
+                {/* Animated border */}
+                <motion.div 
+                  className="absolute inset-0 border-2 border-[#FF5DA2]/50 rounded-3xl"
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                />
+              </div>
+              
+              {/* Floating elements */}
+              <motion.div 
+                className="absolute -top-2 -left-2 w-4 h-4 xs:w-6 xs:h-6 bg-gradient-to-br from-[#D72638] to-[#FF5DA2] rounded-full"
+                animate={{ 
+                  y: [-3, 3, -3],
+                  scale: [1, 1.1, 1]
+                }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              />
+              <motion.div 
+                className="absolute -top-2 -right-2 w-3 h-3 xs:w-5 xs:h-5 bg-gradient-to-br from-[#00A6FB] to-[#FF9F1C] rounded-full"
+                animate={{ 
+                  y: [3, -3, 3],
+                  scale: [1.1, 1, 1.1]
+                }}
+                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+              />
+            </div>
+          </motion.div>
+        </motion.div>
+
+        {/* Specialties Section */}
+        <motion.div
+          className="mb-16 sm:mb-20 lg:mb-24"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-8 sm:mb-12 lg:mb-16">
+            <span className="bg-gradient-to-r from-[#00A6FB] to-[#FF5DA2] bg-clip-text text-transparent">
+              Areas of Expertise
+            </span>
+          </h2>
+          
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 xs:gap-4 sm:gap-6">
+            {specialties.map((specialty, index) => (
+              <motion.div
+                key={specialty}
+                className="bg-gradient-to-br from-[#1a1a2e]/80 to-[#16213e]/80 backdrop-blur-sm border border-[#F5F5F5]/10 rounded-2xl p-3 xs:p-4 sm:p-6 text-center"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
+                whileHover={{ 
+                  scale: 1.05,
+                  boxShadow: "0 10px 30px rgba(255, 93, 162, 0.2)"
+                }}
+              >
+                <p className="text-xs xs:text-sm sm:text-base lg:text-lg font-semibold text-[#F5F5F5]/90">
+                  {specialty}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Qualifications Section */}
+        <motion.div
+          className="mb-16 sm:mb-20 lg:mb-24"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+        >
+          <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-8 sm:mb-12 lg:mb-16">
+            <span className="bg-gradient-to-r from-[#FF9F1C] to-[#D72638] bg-clip-text text-transparent">
+              Qualifications
+            </span>
+          </h2>
+          
+          <div className="grid sm:grid-cols-2 gap-4 xs:gap-6 sm:gap-8">
+            {qualifications.map((qual, index) => (
+              <motion.div
+                key={index}
+                className="bg-gradient-to-br from-[#1a1a2e]/80 to-[#16213e]/80 backdrop-blur-sm border border-[#F5F5F5]/10 rounded-3xl p-4 xs:p-6 sm:p-8 relative overflow-hidden group"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.8 + index * 0.2 }}
+                whileHover={{ 
+                  scale: 1.02,
+                  boxShadow: "0 20px 40px rgba(0, 166, 251, 0.15)"
+                }}
+              >
+                <div className="relative z-10">
+                  <div className="flex justify-between items-start mb-3 xs:mb-4">
+                    <h3 className="text-lg xs:text-xl sm:text-2xl font-bold text-[#F5F5F5] group-hover:text-[#FF5DA2] transition-colors duration-300">
+                      {qual.title}
+                    </h3>
+                    <span className="text-sm xs:text-base font-semibold bg-gradient-to-r from-[#00A6FB] to-[#FF5DA2] bg-clip-text text-transparent">
+                      {qual.year}
+                    </span>
+                  </div>
+                  
+                  <p className="text-sm xs:text-base sm:text-lg font-medium text-[#FF9F1C] mb-2 xs:mb-3">
+                    {qual.institution}
+                  </p>
+                  
+                  <p className="text-xs xs:text-sm sm:text-base text-[#F5F5F5]/80 leading-relaxed">
+                    {qual.description}
+                  </p>
+                </div>
+                
+                {/* Animated background gradient */}
+                <motion.div 
+                  className="absolute inset-0 bg-gradient-to-br from-[#D72638]/5 to-[#00A6FB]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  animate={{ 
+                    background: [
+                      "linear-gradient(to bottom right, rgba(215, 38, 56, 0.05), rgba(0, 166, 251, 0.05))",
+                      "linear-gradient(to bottom right, rgba(0, 166, 251, 0.05), rgba(255, 93, 162, 0.05))",
+                      "linear-gradient(to bottom right, rgba(255, 93, 162, 0.05), rgba(215, 38, 56, 0.05))"
+                    ]
+                  }}
+                  transition={{ duration: 3, repeat: Infinity }}
+                />
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Values Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+        >
+          <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-8 sm:mb-12 lg:mb-16">
+            <span className="bg-gradient-to-r from-[#FF5DA2] to-[#00A6FB] bg-clip-text text-transparent">
+              Core Values
+            </span>
+          </h2>
+          
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 xs:gap-6 sm:gap-8">
+            {values.map((value, index) => (
+              <motion.div
+                key={index}
+                className="bg-gradient-to-br from-[#1a1a2e]/80 to-[#16213e]/80 backdrop-blur-sm border border-[#F5F5F5]/10 rounded-3xl p-4 xs:p-6 sm:p-8 text-center relative overflow-hidden group"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 1 + index * 0.1 }}
+                whileHover={{ 
+                  scale: 1.05,
+                  rotateY: 5,
+                  boxShadow: "0 25px 50px rgba(255, 159, 28, 0.2)"
+                }}
+              >
+                <div className="relative z-10">
+                  <div className="text-3xl xs:text-4xl sm:text-5xl mb-3 xs:mb-4 sm:mb-6">
+                    {value.icon}
+                  </div>
+                  
+                  <h3 className="text-lg xs:text-xl sm:text-2xl font-bold text-[#F5F5F5] mb-2 xs:mb-3 sm:mb-4 group-hover:text-[#FF9F1C] transition-colors duration-300">
+                    {value.title}
+                  </h3>
+                  
+                  <p className="text-xs xs:text-sm sm:text-base text-[#F5F5F5]/80 leading-relaxed">
+                    {value.description}
+                  </p>
+                </div>
+                
+                {/* Animated glow effect */}
+                <motion.div 
+                  className="absolute inset-0 bg-gradient-to-t from-[#FF9F1C]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  animate={{ 
+                    opacity: [0, 0.1, 0]
+                  }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                />
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  )
+}
