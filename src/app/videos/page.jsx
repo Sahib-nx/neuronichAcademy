@@ -15,7 +15,7 @@ export default function Videos() {
       thumbnail: "/api/placeholder/400/225", // Replace with actual thumbnails
       duration: "12:34",
       category: "Mental Health",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", // Replace with actual video URLs
+      videoUrl: "https://www.youtube.com/embed/Sa0BLHoov4w", 
       views: "15.2K"
     },
     {
@@ -25,7 +25,7 @@ export default function Videos() {
       thumbnail: "/api/placeholder/400/225",
       duration: "18:45",
       category: "Mindfulness",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      videoUrl: "https://www.youtube.com/embed/Sa0BLHoov4w",
       views: "8.7K"
     },
     {
@@ -35,7 +35,7 @@ export default function Videos() {
       thumbnail: "/api/placeholder/400/225",
       duration: "22:15",
       category: "Depression",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      videoUrl: "https://www.youtube.com/embed/Sa0BLHoov4w",
       views: "23.1K"
     },
     {
@@ -45,7 +45,7 @@ export default function Videos() {
       thumbnail: "/api/placeholder/400/225",
       duration: "16:28",
       category: "Relationships",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      videoUrl: "https://www.youtube.com/embed/Sa0BLHoov4w",
       views: "11.4K"
     },
     {
@@ -55,7 +55,7 @@ export default function Videos() {
       thumbnail: "/api/placeholder/400/225",
       duration: "14:52",
       category: "Stress",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      videoUrl: "https://www.youtube.com/embed/Sa0BLHoov4w",
       views: "19.8K"
     },
     {
@@ -65,7 +65,7 @@ export default function Videos() {
       thumbnail: "/api/placeholder/400/225",
       duration: "20:33",
       category: "Sleep",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      videoUrl: "https://www.youtube.com/embed/Sa0BLHoov4w",
       views: "7.3K"
     },
     {
@@ -75,7 +75,7 @@ export default function Videos() {
       thumbnail: "/api/placeholder/400/225",
       duration: "25:17",
       category: "Trauma",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      videoUrl: "https://www.youtube.com/embed/Sa0BLHoov4w",
       views: "31.2K"
     },
     {
@@ -85,7 +85,7 @@ export default function Videos() {
       thumbnail: "/api/placeholder/400/225",
       duration: "17:09",
       category: "Self-Esteem",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      videoUrl: "https://www.youtube.com/embed/Sa0BLHoov4w",
       views: "13.6K"
     }
   ]
