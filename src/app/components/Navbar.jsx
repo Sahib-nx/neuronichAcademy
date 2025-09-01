@@ -40,7 +40,7 @@ export default function Navbar() {
     <motion.nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled 
-          ? 'bg-[#0D0D0D]/95 backdrop-blur-md border-b border-[#D72638]/20 shadow-lg shadow-[#D72638]/5' 
+          ? 'bg-[#264653]/95 backdrop-blur-md border-b border-[#2A9D8F]/30 shadow-lg shadow-[#2A9D8F]/10' 
           : 'bg-transparent'
       }`}
       initial={{ y: -100 }}
@@ -57,10 +57,10 @@ export default function Navbar() {
             whileTap={{ scale: 0.95 }}
           >
             <Link href="/" className="flex items-center space-x-1.5 xs:space-x-2">
-              <div className="w-6 h-6 xs:w-7 xs:h-7 sm:w-8 sm:h-8 bg-gradient-to-r from-[#D72638] to-[#FF5DA2] rounded-full flex items-center justify-center shadow-lg shadow-[#D72638]/25">
-                <span className="text-[#F5F5F5] font-bold text-xs xs:text-sm sm:text-sm">Dr</span>
+              <div className="w-6 h-6 xs:w-7 xs:h-7 sm:w-8 sm:h-8 bg-gradient-to-r from-[#2A9D8F] to-[#E9C46A] rounded-full flex items-center justify-center shadow-lg shadow-[#2A9D8F]/25">
+                <span className="text-[#264653] font-bold text-xs xs:text-sm sm:text-sm">Dr</span>
               </div>
-              <span className="text-base xs:text-lg sm:text-xl lg:text-xl font-bold bg-gradient-to-r from-[#00A6FB] to-[#FF5DA2] bg-clip-text text-transparent">
+              <span className="text-base xs:text-lg sm:text-xl lg:text-xl font-bold bg-gradient-to-r from-[#2A9D8F] to-[#E9C46A] bg-clip-text text-transparent">
                 Mind
               </span>
             </Link>
@@ -77,10 +77,10 @@ export default function Navbar() {
               >
                 <Link
                   href={item.href}
-                  className="relative text-[#F5F5F5] hover:text-[#00A6FB] transition-colors duration-300 font-medium text-sm lg:text-base group"
+                  className="relative text-[#F5F5F5] hover:text-[#E9C46A] transition-colors duration-300 font-medium text-sm lg:text-base group"
                 >
                   {item.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#D72638] to-[#FF5DA2] transition-all duration-300 group-hover:w-full"></span>
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#2A9D8F] to-[#E9C46A] transition-all duration-300 group-hover:w-full"></span>
                 </Link>
               </motion.div>
             ))}
@@ -93,7 +93,7 @@ export default function Navbar() {
             >
               <Link href="/contact">
                 <motion.button
-                  className="px-3 py-1.5 lg:px-4 lg:py-2 xl:px-6 xl:py-2 bg-gradient-to-r from-[#D72638] to-[#FF5DA2] rounded-full text-[#F5F5F5] font-medium text-sm lg:text-base hover:shadow-lg hover:shadow-[#D72638]/25 transition-all duration-300"
+                  className="px-3 py-1.5 lg:px-4 lg:py-2 xl:px-6 xl:py-2 bg-gradient-to-r from-[#2A9D8F] to-[#E9C46A] rounded-full text-[#264653] font-medium text-sm lg:text-base hover:shadow-lg hover:shadow-[#2A9D8F]/25 transition-all duration-300"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -151,7 +151,7 @@ export default function Navbar() {
               >
                 <Link
                   href={item.href}
-                  className="block px-3 xs:px-4 py-2 xs:py-2.5 text-[#F5F5F5] hover:text-[#00A6FB] hover:bg-[#F5F5F5]/5 transition-all duration-300 rounded-lg text-sm xs:text-base font-medium"
+                  className="block px-3 xs:px-4 py-2 xs:py-2.5 text-[#F5F5F5] hover:text-[#E9C46A] hover:bg-[#F5F5F5]/5 transition-all duration-300 rounded-lg text-sm xs:text-base font-medium"
                   onClick={() => setMobileOpen(false)}
                 >
                   {item.name}
@@ -168,7 +168,7 @@ export default function Navbar() {
             >
               <Link href="/contact">
                 <motion.button
-                  className="w-full px-4 xs:px-6 py-2.5 xs:py-3 bg-gradient-to-r from-[#D72638] to-[#FF5DA2] rounded-full text-[#F5F5F5] font-medium text-sm xs:text-base shadow-lg shadow-[#D72638]/20 hover:shadow-xl hover:shadow-[#D72638]/30 transition-all duration-300"
+                  className="w-full px-4 xs:px-6 py-2.5 xs:py-3 bg-gradient-to-r from-[#2A9D8F] to-[#E9C46A] rounded-full text-[#264653] font-medium text-sm xs:text-base shadow-lg shadow-[#2A9D8F]/20 hover:shadow-xl hover:shadow-[#2A9D8F]/30 transition-all duration-300"
                   whileTap={{ scale: 0.98 }}
                   onClick={() => setMobileOpen(false)}
                 >
@@ -183,7 +183,7 @@ export default function Navbar() {
       {/* Mobile Menu Backdrop */}
       {mobileOpen && (
         <motion.div
-          className="fixed inset-0 bg-[#0D0D0D]/50 backdrop-blur-sm z-[-1] md:hidden"
+          className="fixed inset-0 bg-[#264653]/50 backdrop-blur-sm z-[-1] md:hidden"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3 }}

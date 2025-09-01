@@ -13,7 +13,7 @@ export default function Contact() {
   })
   
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitStatus, setSubmitStatus] = useState(null) // 'success' | 'error' | null
+  const [submitStatus, setSubmitStatus] = useState(null)
 
   const handleChange = (e) => {
     setFormData({
@@ -74,8 +74,8 @@ export default function Contact() {
     {
       icon: "📍",
       title: "Location",
-      content: "123 Wellness Blvd, Suite 456",
-      description: "San Francisco, CA 94102",
+      content: "Habib Colony, Baghat Barzulla",
+      description: "Srinagar, Jammu and Kashmir",
       link: "https://www.google.com/maps/search/?api=1&query=Habib+Colony+Baghat+Barzulla+Srinagar"
     },
     {
@@ -108,15 +108,15 @@ export default function Contact() {
 
   return (
     <div className="relative min-h-screen overflow-hidden py-16 sm:py-20 lg:py-24">
-      {/* Same gradient background as Hero */}
+      {/* Peaceful gradient background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0D0D0D] via-[#1a0a1a] to-[#0a0a1a]"></div>
-        <div className="absolute inset-0 bg-gradient-to-tr from-[#D72638]/5 via-transparent to-[#00A6FB]/5"></div>
-        <div className="absolute inset-0 bg-gradient-to-bl from-[#FF5DA2]/3 via-transparent to-[#FF9F1C]/3"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#264653] via-[#2A9D8F] to-[#E9C46A]"></div>
+        <div className="absolute inset-0 bg-gradient-to-tr from-[#E76F51]/10 via-transparent to-[#F4A261]/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-bl from-[#E9C46A]/20 via-transparent to-[#264653]/30"></div>
         
-        {/* Animated gradient orbs */}
+        {/* Therapeutic animated gradient orbs */}
         <motion.div 
-          className="absolute top-1/4 right-1/4 w-32 h-32 xs:w-40 xs:h-40 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96 bg-gradient-radial from-[#D72638]/10 to-transparent rounded-full blur-2xl sm:blur-3xl"
+          className="absolute top-1/4 right-1/4 w-32 h-32 xs:w-40 xs:h-40 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96 bg-gradient-radial from-[#2A9D8F]/15 to-transparent rounded-full blur-2xl sm:blur-3xl"
           animate={{ 
             scale: [1, 1.3, 1],
             opacity: [0.2, 0.5, 0.2]
@@ -128,7 +128,7 @@ export default function Contact() {
           }}
         />
         <motion.div 
-          className="absolute bottom-1/3 left-1/3 w-32 h-32 xs:w-40 xs:h-40 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96 bg-gradient-radial from-[#00A6FB]/10 to-transparent rounded-full blur-2xl sm:blur-3xl"
+          className="absolute bottom-1/3 left-1/3 w-32 h-32 xs:w-40 xs:h-40 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96 bg-gradient-radial from-[#E9C46A]/15 to-transparent rounded-full blur-2xl sm:blur-3xl"
           animate={{ 
             scale: [1.3, 1, 1.3],
             opacity: [0.5, 0.2, 0.5]
@@ -151,13 +151,13 @@ export default function Contact() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 xs:mb-6 sm:mb-8">
-            <span className="bg-gradient-to-r from-[#FF5DA2] via-[#D72638] to-[#FF9F1C] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#E9C46A] via-[#F4A261] to-[#E76F51] bg-clip-text text-transparent">
               Get In Touch
             </span>
           </h1>
           <p className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl text-[#F5F5F5]/80 max-w-4xl mx-auto leading-relaxed px-2 sm:px-0">
             Ready to begin your journey to mental wellness? 
-            <span className="bg-gradient-to-r from-[#00A6FB] to-[#FF5DA2] bg-clip-text text-transparent font-medium"> Let's connect today</span>
+            <span className="bg-gradient-to-r from-[#2A9D8F] to-[#E9C46A] bg-clip-text text-transparent font-medium"> Let's connect today</span>
           </p>
         </motion.div>
 
@@ -170,11 +170,11 @@ export default function Contact() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <div className="bg-gradient-to-br from-[#1a1a2e]/90 to-[#16213e]/90 backdrop-blur-sm border border-[#F5F5F5]/10 rounded-3xl p-4 xs:p-6 sm:p-8 lg:p-10 relative overflow-hidden">
+            <div className="bg-gradient-to-br from-[#264653]/90 to-[#2A9D8F]/80 backdrop-blur-sm border border-[#F5F5F5]/10 rounded-3xl p-4 xs:p-6 sm:p-8 lg:p-10 relative overflow-hidden">
               
               {/* Animated background effects */}
               <motion.div 
-                className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-[#FF5DA2]/20 to-transparent rounded-full blur-2xl"
+                className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-[#E9C46A]/20 to-transparent rounded-full blur-2xl"
                 animate={{ 
                   scale: [1, 1.2, 1],
                   rotate: [0, 180, 360]
@@ -182,7 +182,7 @@ export default function Contact() {
                 transition={{ duration: 10, repeat: Infinity }}
               />
               <motion.div 
-                className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-[#00A6FB]/20 to-transparent rounded-full blur-xl"
+                className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-[#F4A261]/20 to-transparent rounded-full blur-xl"
                 animate={{ 
                   scale: [1.2, 1, 1.2],
                   rotate: [360, 180, 0]
@@ -197,12 +197,12 @@ export default function Contact() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.3 }}
                 >
-                  <span className="bg-gradient-to-r from-[#00A6FB] to-[#FF5DA2] bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-[#2A9D8F] to-[#E9C46A] bg-clip-text text-transparent">
                     Send a Message
                   </span>
                 </motion.h2>
 
-                <form onSubmit={handleSubmit} className="space-y-4 xs:space-y-6">
+                <div className="space-y-4 xs:space-y-6">
                   <div className="grid sm:grid-cols-2 gap-4 xs:gap-6">
                     <motion.div
                       initial={{ opacity: 0, y: 20 }}
@@ -219,7 +219,7 @@ export default function Contact() {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full bg-[#0D0D0D]/50 border border-[#F5F5F5]/20 rounded-xl px-3 xs:px-4 py-2.5 xs:py-3 text-sm xs:text-base text-[#F5F5F5] placeholder-[#F5F5F5]/50 focus:outline-none focus:border-[#FF5DA2] focus:ring-2 focus:ring-[#FF5DA2]/20 transition-all duration-300"
+                        className="w-full bg-[#264653]/50 border border-[#F5F5F5]/20 rounded-xl px-3 xs:px-4 py-2.5 xs:py-3 text-sm xs:text-base text-[#F5F5F5] placeholder-[#F5F5F5]/50 focus:outline-none focus:border-[#E9C46A] focus:ring-2 focus:ring-[#E9C46A]/20 transition-all duration-300"
                         placeholder="Enter your name"
                       />
                     </motion.div>
@@ -239,7 +239,7 @@ export default function Contact() {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full bg-[#0D0D0D]/50 border border-[#F5F5F5]/20 rounded-xl px-3 xs:px-4 py-2.5 xs:py-3 text-sm xs:text-base text-[#F5F5F5] placeholder-[#F5F5F5]/50 focus:outline-none focus:border-[#00A6FB] focus:ring-2 focus:ring-[#00A6FB]/20 transition-all duration-300"
+                        className="w-full bg-[#264653]/50 border border-[#F5F5F5]/20 rounded-xl px-3 xs:px-4 py-2.5 xs:py-3 text-sm xs:text-base text-[#F5F5F5] placeholder-[#F5F5F5]/50 focus:outline-none focus:border-[#2A9D8F] focus:ring-2 focus:ring-[#2A9D8F]/20 transition-all duration-300"
                         placeholder="Enter your email"
                       />
                     </motion.div>
@@ -260,7 +260,7 @@ export default function Contact() {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full bg-[#0D0D0D]/50 border border-[#F5F5F5]/20 rounded-xl px-3 xs:px-4 py-2.5 xs:py-3 text-sm xs:text-base text-[#F5F5F5] placeholder-[#F5F5F5]/50 focus:outline-none focus:border-[#FF9F1C] focus:ring-2 focus:ring-[#FF9F1C]/20 transition-all duration-300"
+                        className="w-full bg-[#264653]/50 border border-[#F5F5F5]/20 rounded-xl px-3 xs:px-4 py-2.5 xs:py-3 text-sm xs:text-base text-[#F5F5F5] placeholder-[#F5F5F5]/50 focus:outline-none focus:border-[#F4A261] focus:ring-2 focus:ring-[#F4A261]/20 transition-all duration-300"
                         placeholder="(555) 123-4567"
                       />
                     </motion.div>
@@ -279,7 +279,7 @@ export default function Contact() {
                         value={formData.subject}
                         onChange={handleChange}
                         required
-                        className="w-full bg-[#0D0D0D]/50 border border-[#F5F5F5]/20 rounded-xl px-3 xs:px-4 py-2.5 xs:py-3 text-sm xs:text-base text-[#F5F5F5] focus:outline-none focus:border-[#D72638] focus:ring-2 focus:ring-[#D72638]/20 transition-all duration-300"
+                        className="w-full bg-[#264653]/50 border border-[#F5F5F5]/20 rounded-xl px-3 xs:px-4 py-2.5 xs:py-3 text-sm xs:text-base text-[#F5F5F5] focus:outline-none focus:border-[#E76F51] focus:ring-2 focus:ring-[#E76F51]/20 transition-all duration-300"
                       >
                         <option value="">Select a topic</option>
                         <option value="consultation">Initial Consultation</option>
@@ -306,7 +306,7 @@ export default function Contact() {
                       onChange={handleChange}
                       required
                       rows="5"
-                      className="w-full bg-[#0D0D0D]/50 border border-[#F5F5F5]/20 rounded-xl px-3 xs:px-4 py-2.5 xs:py-3 text-sm xs:text-base text-[#F5F5F5] placeholder-[#F5F5F5]/50 focus:outline-none focus:border-[#FF5DA2] focus:ring-2 focus:ring-[#FF5DA2]/20 transition-all duration-300 resize-vertical"
+                      className="w-full bg-[#264653]/50 border border-[#F5F5F5]/20 rounded-xl px-3 xs:px-4 py-2.5 xs:py-3 text-sm xs:text-base text-[#F5F5F5] placeholder-[#F5F5F5]/50 focus:outline-none focus:border-[#E9C46A] focus:ring-2 focus:ring-[#E9C46A]/20 transition-all duration-300 resize-vertical"
                       placeholder="Please describe how I can help you..."
                     />
                   </motion.div>
@@ -317,18 +317,19 @@ export default function Contact() {
                     transition={{ duration: 0.6, delay: 0.9 }}
                   >
                     <button
-                      type="submit"
+                      type="button"
+                      onClick={handleSubmit}
                       disabled={isSubmitting}
-                      className="w-full sm:w-auto px-6 xs:px-8 sm:px-10 py-3 xs:py-4 bg-gradient-to-r from-[#D72638] via-[#FF5DA2] to-[#FF9F1C] rounded-full text-[#F5F5F5] font-bold text-sm xs:text-base sm:text-lg shadow-xl shadow-[#D72638]/30 relative overflow-hidden group disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
+                      className="w-full sm:w-auto px-6 xs:px-8 sm:px-10 py-3 xs:py-4 bg-gradient-to-r from-[#2A9D8F] via-[#E9C46A] to-[#F4A261] rounded-full text-[#264653] font-bold text-sm xs:text-base sm:text-lg shadow-xl shadow-[#2A9D8F]/30 relative overflow-hidden group disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
                     >
                       <span className="relative z-10">
                         {isSubmitting ? 'Sending...' : 'Send Message'}
                       </span>
-                      <div className="absolute inset-0 bg-gradient-to-r from-[#FF5DA2] via-[#D72638] to-[#FF9F1C] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      <div className="absolute inset-0 bg-gradient-to-r from-[#E9C46A] via-[#F4A261] to-[#E76F51] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                       
                       {!isSubmitting && (
                         <motion.div
-                          className="absolute inset-0 bg-gradient-to-r from-[#00A6FB]/20 to-[#FF5DA2]/20"
+                          className="absolute inset-0 bg-gradient-to-r from-[#2A9D8F]/20 to-[#E9C46A]/20"
                           animate={{ x: [-100, 300] }}
                           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                         />
@@ -360,7 +361,7 @@ export default function Contact() {
                       </p>
                     </motion.div>
                   )}
-                </form>
+                </div>
               </div>
             </div>
           </motion.div>
@@ -373,7 +374,7 @@ export default function Contact() {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <h2 className="text-xl xs:text-2xl sm:text-3xl font-bold mb-6 sm:mb-8">
-              <span className="bg-gradient-to-r from-[#FF9F1C] to-[#D72638] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#E9C46A] to-[#F4A261] bg-clip-text text-transparent">
                 Contact Info
               </span>
             </h2>
@@ -384,13 +385,13 @@ export default function Contact() {
                 href={info.link}
                 target={info.title === "Location" ? "_blank" : "_self"}
                 rel={info.title === "Location" ? "noopener noreferrer" : undefined}
-                className="block bg-gradient-to-br from-[#1a1a2e]/80 to-[#16213e]/80 backdrop-blur-sm border border-[#F5F5F5]/10 rounded-2xl p-4 xs:p-6 relative overflow-hidden group cursor-pointer"
+                className="block bg-gradient-to-br from-[#264653]/80 to-[#2A9D8F]/70 backdrop-blur-sm border border-[#F5F5F5]/10 rounded-2xl p-4 xs:p-6 relative overflow-hidden group cursor-pointer"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
                 whileHover={{ 
                   scale: 1.02,
-                  boxShadow: "0 10px 30px rgba(255, 93, 162, 0.15)"
+                  boxShadow: "0 10px 30px rgba(233, 196, 106, 0.15)"
                 }}
               >
                 <div className="relative z-10">
@@ -399,10 +400,10 @@ export default function Contact() {
                       {info.icon}
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-base xs:text-lg font-bold text-[#F5F5F5] group-hover:text-[#FF5DA2] transition-colors duration-300">
+                      <h3 className="text-base xs:text-lg font-bold text-[#F5F5F5] group-hover:text-[#E9C46A] transition-colors duration-300">
                         {info.title}
                       </h3>
-                      <p className="text-sm xs:text-base font-medium text-[#00A6FB] mt-1">
+                      <p className="text-sm xs:text-base font-medium text-[#2A9D8F] mt-1">
                         {info.content}
                       </p>
                       <p className="text-xs xs:text-sm text-[#F5F5F5]/70 mt-1">
@@ -413,7 +414,7 @@ export default function Contact() {
                 </div>
 
                 <motion.div 
-                  className="absolute inset-0 bg-gradient-to-r from-[#FF5DA2]/5 to-[#00A6FB]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  className="absolute inset-0 bg-gradient-to-r from-[#E9C46A]/5 to-[#2A9D8F]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 />
               </motion.a>
             ))}
@@ -427,7 +428,7 @@ export default function Contact() {
           transition={{ duration: 0.8, delay: 0.8 }}
         >
           <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-8 sm:mb-12 lg:mb-16">
-            <span className="bg-gradient-to-r from-[#00A6FB] to-[#FF5DA2] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#2A9D8F] to-[#E9C46A] bg-clip-text text-transparent">
               Frequently Asked Questions
             </span>
           </h2>
@@ -436,17 +437,17 @@ export default function Contact() {
             {faqs.map((faq, index) => (
               <motion.div
                 key={index}
-                className="bg-gradient-to-br from-[#1a1a2e]/80 to-[#16213e]/80 backdrop-blur-sm border border-[#F5F5F5]/10 rounded-2xl p-4 xs:p-6 sm:p-8 relative overflow-hidden group"
+                className="bg-gradient-to-br from-[#264653]/80 to-[#2A9D8F]/70 backdrop-blur-sm border border-[#F5F5F5]/10 rounded-2xl p-4 xs:p-6 sm:p-8 relative overflow-hidden group"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 1 + index * 0.1 }}
                 whileHover={{ 
                   scale: 1.02,
-                  boxShadow: "0 15px 35px rgba(0, 166, 251, 0.1)"
+                  boxShadow: "0 15px 35px rgba(42, 157, 143, 0.1)"
                 }}
               >
                 <div className="relative z-10">
-                  <h3 className="text-base xs:text-lg sm:text-xl font-bold text-[#FF9F1C] mb-2 xs:mb-3 group-hover:text-[#FF5DA2] transition-colors duration-300">
+                  <h3 className="text-base xs:text-lg sm:text-xl font-bold text-[#F4A261] mb-2 xs:mb-3 group-hover:text-[#E9C46A] transition-colors duration-300">
                     {faq.question}
                   </h3>
                   <p className="text-xs xs:text-sm sm:text-base text-[#F5F5F5]/80 leading-relaxed">
@@ -455,7 +456,7 @@ export default function Contact() {
                 </div>
 
                 <motion.div 
-                  className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-[#D72638]/10 to-transparent rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-[#2A9D8F]/10 to-transparent rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                 />
               </motion.div>
             ))}
@@ -469,14 +470,14 @@ export default function Contact() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.2 }}
         >
-          <div className="bg-gradient-to-r from-[#D72638]/20 to-[#FF5DA2]/20 backdrop-blur-sm border border-red-400/30 rounded-2xl p-4 xs:p-6 sm:p-8 max-w-4xl mx-auto">
-            <h3 className="text-lg xs:text-xl sm:text-2xl font-bold text-red-400 mb-3 xs:mb-4">
+          <div className="bg-gradient-to-r from-[#E76F51]/20 to-[#F4A261]/20 backdrop-blur-sm border border-orange-400/30 rounded-2xl p-4 xs:p-6 sm:p-8 max-w-4xl mx-auto">
+            <h3 className="text-lg xs:text-xl sm:text-2xl font-bold text-orange-400 mb-3 xs:mb-4">
               🚨 Crisis Support
             </h3>
             <p className="text-sm xs:text-base sm:text-lg text-[#F5F5F5]/90 leading-relaxed">
               If you're experiencing a mental health emergency, please don't wait for a response. 
-              Call <span className="font-bold text-red-400">988</span> for the Suicide & Crisis Lifeline 
-              or <span className="font-bold text-red-400">911</span> for immediate emergency services.
+              Call <span className="font-bold text-orange-400">988</span> for the Suicide & Crisis Lifeline 
+              or <span className="font-bold text-orange-400">911</span> for immediate emergency services.
             </p>
           </div>
         </motion.div>

@@ -59,15 +59,15 @@ export default function About() {
 
   return (
     <div className="relative min-h-screen overflow-hidden py-16 sm:py-20 lg:py-24">
-      {/* Same gradient background as Hero */}
+      {/* Peaceful gradient background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0D0D0D] via-[#1a0a1a] to-[#0a0a1a]"></div>
-        <div className="absolute inset-0 bg-gradient-to-tr from-[#D72638]/5 via-transparent to-[#00A6FB]/5"></div>
-        <div className="absolute inset-0 bg-gradient-to-bl from-[#FF5DA2]/3 via-transparent to-[#FF9F1C]/3"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#264653] via-[#2A9D8F] to-[#E9C46A]"></div>
+        <div className="absolute inset-0 bg-gradient-to-tr from-[#E76F51]/10 via-transparent to-[#F4A261]/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-bl from-[#E9C46A]/20 via-transparent to-[#264653]/30"></div>
         
-        {/* Animated gradient orbs */}
+        {/* Therapeutic animated gradient orbs */}
         <motion.div 
-          className="absolute top-1/4 left-1/4 w-32 h-32 xs:w-40 xs:h-40 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96 bg-gradient-radial from-[#D72638]/10 to-transparent rounded-full blur-2xl sm:blur-3xl"
+          className="absolute top-1/4 left-1/4 w-32 h-32 xs:w-40 xs:h-40 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96 bg-gradient-radial from-[#2A9D8F]/15 to-transparent rounded-full blur-2xl sm:blur-3xl"
           animate={{ 
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.6, 0.3]
@@ -79,7 +79,7 @@ export default function About() {
           }}
         />
         <motion.div 
-          className="absolute bottom-1/4 right-1/4 w-32 h-32 xs:w-40 xs:h-40 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96 bg-gradient-radial from-[#00A6FB]/10 to-transparent rounded-full blur-2xl sm:blur-3xl"
+          className="absolute bottom-1/4 right-1/4 w-32 h-32 xs:w-40 xs:h-40 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96 bg-gradient-radial from-[#E9C46A]/15 to-transparent rounded-full blur-2xl sm:blur-3xl"
           animate={{ 
             scale: [1.2, 1, 1.2],
             opacity: [0.6, 0.3, 0.6]
@@ -102,13 +102,13 @@ export default function About() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 xs:mb-6 sm:mb-8">
-            <span className="bg-gradient-to-r from-[#00A6FB] via-[#FF5DA2] to-[#D72638] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#2A9D8F] via-[#E9C46A] to-[#F4A261] bg-clip-text text-transparent">
               About Me
             </span>
           </h1>
           <p className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl text-[#F5F5F5]/80 max-w-4xl mx-auto leading-relaxed px-2 sm:px-0">
             Dedicated to empowering minds and transforming lives through 
-            <span className="bg-gradient-to-r from-[#FF5DA2] to-[#00A6FB] bg-clip-text text-transparent font-medium"> evidence-based psychology</span>
+            <span className="bg-gradient-to-r from-[#E9C46A] to-[#F4A261] bg-clip-text text-transparent font-medium"> evidence-based psychology</span>
           </p>
         </motion.div>
 
@@ -126,7 +126,7 @@ export default function About() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              <span className="bg-gradient-to-r from-[#FF9F1C] to-[#D72638] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#E9C46A] to-[#F4A261] bg-clip-text text-transparent">
                 My Journey
               </span>
             </motion.h2>
@@ -138,11 +138,11 @@ export default function About() {
               transition={{ duration: 0.8, delay: 0.6 }}
             >
               <p>
-                With 5 years of dedicated experience in psychology, I have committed myself to the mission of supporting mental health and well-being. My passion for psychology began in 2021, when I recognized how deeply mental health shapes every aspect of human life and how professional guidance can transform an individual&apos;s path.
+                With 5 years of dedicated experience in psychology, I have committed myself to the mission of supporting mental health and well-being. My passion for psychology began in 2021, when I recognized how deeply mental health shapes every aspect of human life and how professional guidance can transform an individual's path.
               </p>
               
               <p>
-                Since then, I have worked with a wide range of people—from students under <span className="text-[#FF5DA2] font-medium">academic pressure to individuals struggling with anxiety, depression, PTSD, OCD, and schizophrenia.</span>  My therapeutic approach primarily draws from Cognitive Behavioral Therapy (CBT) and other evidence-based methods, while also embracing holistic perspectives that foster resilience and balance.
+                Since then, I have worked with a wide range of people—from students under <span className="bg-gradient-to-r from-[#E9C46A] to-[#F4A261] bg-clip-text text-transparent font-medium">academic pressure to individuals struggling with anxiety, depression, PTSD, OCD, and schizophrenia.</span> My therapeutic approach primarily draws from Cognitive Behavioral Therapy (CBT) and other evidence-based methods, while also embracing holistic perspectives that foster resilience and balance.
               </p>
               
               <p>
@@ -150,7 +150,7 @@ export default function About() {
               </p>
 
               <p>
-                Through <span className="text-[#FF5DA2] font-medium" >Neuroniche Academy</span>, my vision is to extend this support to every individual in need, ensuring that no one has to face mental challenges alon
+                Through <span className="bg-gradient-to-r from-[#E9C46A] to-[#F4A261] bg-clip-text text-transparent font-medium">Neuroniche Academy</span>, my vision is to extend this support to every individual in need, ensuring that no one has to face mental challenges alone.
               </p>
             </motion.div>
           </div>
@@ -162,15 +162,15 @@ export default function About() {
             transition={{ duration: 0.8, delay: 0.3 }}
           >
             <div className="relative">
-              <div className="w-64 h-64 xs:w-72 xs:h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-80 lg:h-80 xl:w-96 xl:h-96 bg-gradient-to-br from-[#D72638]/20 via-[#FF5DA2]/20 to-[#00A6FB]/20 rounded-3xl backdrop-blur-sm border border-[#F5F5F5]/10 flex items-center justify-center relative overflow-hidden">
+              <div className="w-64 h-64 xs:w-72 xs:h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-80 lg:h-80 xl:w-96 xl:h-96 bg-gradient-to-br from-[#2A9D8F]/20 via-[#E9C46A]/20 to-[#F4A261]/20 rounded-3xl backdrop-blur-sm border border-[#F5F5F5]/10 flex items-center justify-center relative overflow-hidden">
                 {/* Placeholder for doctor image */}
-                <div className="w-full h-full bg-gradient-to-br from-[#FF5DA2]/30 to-[#00A6FB]/30 rounded-3xl flex items-center justify-center">
+                <div className="w-full h-full bg-gradient-to-br from-[#E9C46A]/30 to-[#2A9D8F]/30 rounded-3xl flex items-center justify-center">
                   <div className="text-6xl xs:text-7xl sm:text-8xl lg:text-9xl"><Image src="/img2.png" width={400} height={400} alt='image' /></div>
                 </div>
                 
                 {/* Animated border */}
                 <motion.div 
-                  className="absolute inset-0 border-2 border-[#FF5DA2]/50 rounded-3xl"
+                  className="absolute inset-0 border-2 border-[#E9C46A]/50 rounded-3xl"
                   animate={{ rotate: 360 }}
                   transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
                 />
@@ -178,7 +178,7 @@ export default function About() {
               
               {/* Floating elements */}
               <motion.div 
-                className="absolute -top-2 -left-2 w-4 h-4 xs:w-6 xs:h-6 bg-gradient-to-br from-[#D72638] to-[#FF5DA2] rounded-full"
+                className="absolute -top-2 -left-2 w-4 h-4 xs:w-6 xs:h-6 bg-gradient-to-br from-[#2A9D8F] to-[#E9C46A] rounded-full"
                 animate={{ 
                   y: [-3, 3, -3],
                   scale: [1, 1.1, 1]
@@ -186,7 +186,7 @@ export default function About() {
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               />
               <motion.div 
-                className="absolute -top-2 -right-2 w-3 h-3 xs:w-5 xs:h-5 bg-gradient-to-br from-[#00A6FB] to-[#FF9F1C] rounded-full"
+                className="absolute -top-2 -right-2 w-3 h-3 xs:w-5 xs:h-5 bg-gradient-to-br from-[#E9C46A] to-[#F4A261] rounded-full"
                 animate={{ 
                   y: [3, -3, 3],
                   scale: [1.1, 1, 1.1]
@@ -205,7 +205,7 @@ export default function About() {
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-8 sm:mb-12 lg:mb-16">
-            <span className="bg-gradient-to-r from-[#00A6FB] to-[#FF5DA2] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#2A9D8F] to-[#E9C46A] bg-clip-text text-transparent">
               Areas of Expertise
             </span>
           </h2>
@@ -214,13 +214,13 @@ export default function About() {
             {specialties.map((specialty, index) => (
               <motion.div
                 key={specialty}
-                className="bg-gradient-to-br from-[#1a1a2e]/80 to-[#16213e]/80 backdrop-blur-sm border border-[#F5F5F5]/10 rounded-2xl p-3 xs:p-4 sm:p-6 text-center"
+                className="bg-gradient-to-br from-[#264653]/80 to-[#2A9D8F]/60 backdrop-blur-sm border border-[#F5F5F5]/10 rounded-2xl p-3 xs:p-4 sm:p-6 text-center"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
                 whileHover={{ 
                   scale: 1.05,
-                  boxShadow: "0 10px 30px rgba(255, 93, 162, 0.2)"
+                  boxShadow: "0 10px 30px rgba(233, 196, 106, 0.2)"
                 }}
               >
                 <p className="text-xs xs:text-sm sm:text-base lg:text-lg font-semibold text-[#F5F5F5]/90">
@@ -239,8 +239,8 @@ export default function About() {
           transition={{ duration: 0.8, delay: 0.6 }}
         >
           <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-8 sm:mb-12 lg:mb-16">
-            <span className="bg-gradient-to-r from-[#FF9F1C] to-[#D72638] bg-clip-text text-transparent">
-              Qualification and Experince
+            <span className="bg-gradient-to-r from-[#E9C46A] to-[#F4A261] bg-clip-text text-transparent">
+              Qualification and Experience
             </span>
           </h2>
           
@@ -248,26 +248,26 @@ export default function About() {
             {qualifications.map((qual, index) => (
               <motion.div
                 key={index}
-                className="bg-gradient-to-br from-[#1a1a2e]/80 to-[#16213e]/80 backdrop-blur-sm border border-[#F5F5F5]/10 rounded-3xl p-4 xs:p-6 sm:p-8 relative overflow-hidden group"
+                className="bg-gradient-to-br from-[#264653]/80 to-[#2A9D8F]/60 backdrop-blur-sm border border-[#F5F5F5]/10 rounded-3xl p-4 xs:p-6 sm:p-8 relative overflow-hidden group"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.8 + index * 0.2 }}
                 whileHover={{ 
                   scale: 1.02,
-                  boxShadow: "0 20px 40px rgba(0, 166, 251, 0.15)"
+                  boxShadow: "0 20px 40px rgba(42, 157, 143, 0.15)"
                 }}
               >
                 <div className="relative z-10">
                   <div className="flex justify-between items-start mb-3 xs:mb-4">
-                    <h3 className="text-lg xs:text-xl sm:text-2xl font-bold text-[#F5F5F5] group-hover:text-[#FF5DA2] transition-colors duration-300">
+                    <h3 className="text-lg xs:text-xl sm:text-2xl font-bold text-[#F5F5F5] group-hover:text-[#E9C46A] transition-colors duration-300">
                       {qual.title}
                     </h3>
-                    <span className="text-sm xs:text-base font-semibold bg-gradient-to-r from-[#00A6FB] to-[#FF5DA2] bg-clip-text text-transparent">
+                    <span className="text-sm xs:text-base font-semibold bg-gradient-to-r from-[#2A9D8F] to-[#E9C46A] bg-clip-text text-transparent">
                       {qual.year}
                     </span>
                   </div>
                   
-                  <p className="text-sm xs:text-base sm:text-lg font-medium text-[#FF9F1C] mb-2 xs:mb-3">
+                  <p className="text-sm xs:text-base sm:text-lg font-medium text-[#F4A261] mb-2 xs:mb-3">
                     {qual.institution}
                   </p>
                   
@@ -278,12 +278,12 @@ export default function About() {
                 
                 {/* Animated background gradient */}
                 <motion.div 
-                  className="absolute inset-0 bg-gradient-to-br from-[#D72638]/5 to-[#00A6FB]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  className="absolute inset-0 bg-gradient-to-br from-[#2A9D8F]/5 to-[#E9C46A]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                   animate={{ 
                     background: [
-                      "linear-gradient(to bottom right, rgba(215, 38, 56, 0.05), rgba(0, 166, 251, 0.05))",
-                      "linear-gradient(to bottom right, rgba(0, 166, 251, 0.05), rgba(255, 93, 162, 0.05))",
-                      "linear-gradient(to bottom right, rgba(255, 93, 162, 0.05), rgba(215, 38, 56, 0.05))"
+                      "linear-gradient(to bottom right, rgba(42, 157, 143, 0.05), rgba(233, 196, 106, 0.05))",
+                      "linear-gradient(to bottom right, rgba(233, 196, 106, 0.05), rgba(244, 162, 97, 0.05))",
+                      "linear-gradient(to bottom right, rgba(244, 162, 97, 0.05), rgba(42, 157, 143, 0.05))"
                     ]
                   }}
                   transition={{ duration: 3, repeat: Infinity }}
@@ -300,7 +300,7 @@ export default function About() {
           transition={{ duration: 0.8, delay: 0.8 }}
         >
           <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-8 sm:mb-12 lg:mb-16">
-            <span className="bg-gradient-to-r from-[#FF5DA2] to-[#00A6FB] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#E9C46A] to-[#2A9D8F] bg-clip-text text-transparent">
               Core Values
             </span>
           </h2>
@@ -309,14 +309,14 @@ export default function About() {
             {values.map((value, index) => (
               <motion.div
                 key={index}
-                className="bg-gradient-to-br from-[#1a1a2e]/80 to-[#16213e]/80 backdrop-blur-sm border border-[#F5F5F5]/10 rounded-3xl p-4 xs:p-6 sm:p-8 text-center relative overflow-hidden group"
+                className="bg-gradient-to-br from-[#264653]/80 to-[#2A9D8F]/60 backdrop-blur-sm border border-[#F5F5F5]/10 rounded-3xl p-4 xs:p-6 sm:p-8 text-center relative overflow-hidden group"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 1 + index * 0.1 }}
                 whileHover={{ 
                   scale: 1.05,
                   rotateY: 5,
-                  boxShadow: "0 25px 50px rgba(255, 159, 28, 0.2)"
+                  boxShadow: "0 25px 50px rgba(244, 162, 97, 0.2)"
                 }}
               >
                 <div className="relative z-10">
@@ -324,7 +324,7 @@ export default function About() {
                     {value.icon}
                   </div>
                   
-                  <h3 className="text-lg xs:text-xl sm:text-2xl font-bold text-[#F5F5F5] mb-2 xs:mb-3 sm:mb-4 group-hover:text-[#FF9F1C] transition-colors duration-300">
+                  <h3 className="text-lg xs:text-xl sm:text-2xl font-bold text-[#F5F5F5] mb-2 xs:mb-3 sm:mb-4 group-hover:text-[#E9C46A] transition-colors duration-300">
                     {value.title}
                   </h3>
                   
@@ -335,7 +335,7 @@ export default function About() {
                 
                 {/* Animated glow effect */}
                 <motion.div 
-                  className="absolute inset-0 bg-gradient-to-t from-[#FF9F1C]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  className="absolute inset-0 bg-gradient-to-t from-[#E9C46A]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                   animate={{ 
                     opacity: [0, 0.1, 0]
                   }}
