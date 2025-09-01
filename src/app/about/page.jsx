@@ -12,22 +12,16 @@ export default function About() {
       description: "Specialized in cognitive behavioral therapy and neuropsychology"
     },
     {
-      title: "Licensed Clinical Psychologist",
-      institution: "California Board of Psychology",
-      year: "2019",
-      description: "License #PSY12345 - Active and in good standing"
+      title: "Clinical Psychologist",
+      institution: "Friends Hospital, Tengpora Bridge, Batmaloo, Srinagar",
+      year: "Oct 2024 - Dec 2024",
+      description: "Diagnosed and managed clients with anxiety disorders, general depression, OCD, ROCD, substance abuse, bipolar disorder, and PTSD. Has treated clients with self-harm and suicidal tendencies. Has treated students with mental health problems (depression, substance abuse, withdrawal, anxiety disorders, self-harm tendencies.) Has treated clients from diverse and strict cultural backgrounds and social statuses."
     },
     {
-      title: "Certified Trauma Specialist",
-      institution: "International Society for Traumatic Stress Studies",
-      year: "2020",
-      description: "Advanced certification in trauma-informed therapy"
-    },
-    {
-      title: "Mindfulness-Based Therapy Certification",
-      institution: "Center for Mindfulness",
-      year: "2021",
-      description: "Specialized training in mindfulness-based interventions"
+      title: "Volunteer & Life Member",
+      institution: "Indian Red Cross Society",
+      year: "2023 - Present",
+      description: "Volunteer, Trained First Aid Professional & Life Member. Certified in First Aid, equipped to provide immediate lifesaving assistance in emergency. Committed to humanitarian service through disaster relief, health drives and community."
     }
   ]
 
@@ -144,15 +138,19 @@ export default function About() {
               transition={{ duration: 0.8, delay: 0.6 }}
             >
               <p>
-                With over 15 years of experience in clinical psychology, I've dedicated my career to understanding the intricate workings of the human mind. My passion for mental health began during my undergraduate studies, where I witnessed firsthand the transformative power of psychological intervention.
+                With 5 years of dedicated experience in psychology, I have committed myself to the mission of supporting mental health and well-being. My passion for psychology began in 2021, when I recognized how deeply mental health shapes every aspect of human life and how professional guidance can transform an individual&apos;s path.
               </p>
               
               <p>
-                Throughout my practice, I've worked with diverse populations, from adolescents navigating life transitions to adults overcoming trauma and depression. My approach combines <span className="text-[#FF5DA2] font-medium">traditional therapeutic methods</span> with innovative mindfulness-based techniques.
+                Since then, I have worked with a wide range of people—from students under <span className="text-[#FF5DA2] font-medium">academic pressure to individuals struggling with anxiety, depression, PTSD, OCD, and schizophrenia.</span>  My therapeutic approach primarily draws from Cognitive Behavioral Therapy (CBT) and other evidence-based methods, while also embracing holistic perspectives that foster resilience and balance.
               </p>
               
               <p>
-                I believe that every individual possesses an innate capacity for healing and growth. My role is to provide the tools, support, and safe space necessary for that transformation to unfold naturally.
+                I firmly believe that every person carries within them the strength to heal, grow, and thrive, no matter how heavy their struggles may seem. My role is to provide a safe, supportive, and understanding space where that potential can emerge naturally.
+              </p>
+
+              <p>
+                Through <span className="text-[#FF5DA2] font-medium" >Neuroniche Academy</span>, my vision is to extend this support to every individual in need, ensuring that no one has to face mental challenges alon
               </p>
             </motion.div>
           </div>
@@ -242,7 +240,7 @@ export default function About() {
         >
           <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-8 sm:mb-12 lg:mb-16">
             <span className="bg-gradient-to-r from-[#FF9F1C] to-[#D72638] bg-clip-text text-transparent">
-              Qualifications
+              Qualification and Experince
             </span>
           </h2>
           

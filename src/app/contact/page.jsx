@@ -60,26 +60,30 @@ export default function Contact() {
     {
       icon: "📞",
       title: "Phone",
-      content: "7889681727",
-      description: "Monday - Friday, 9AM - 6PM"
+      content: "+917889831747",
+      description: "Monday - Friday, 9AM - 6PM",
+      link: "tel:+917889831747"
     },
     {
       icon: "📧",
       title: "Email",
-      content: "idrees@mindmastery.com",
-      description: "Response within 24 hours"
+      content: "neuronicheacademy@gmail.com",
+      description: "Response within 24 hours",
+      link: "mailto:neuronicheacademy@gmail.com"
     },
     {
       icon: "📍",
       title: "Location",
       content: "123 Wellness Blvd, Suite 456",
-      description: "San Francisco, CA 94102"
+      description: "San Francisco, CA 94102",
+      link: "https://www.google.com/maps/search/?api=1&query=Habib+Colony+Baghat+Barzulla+Srinagar"
     },
     {
       icon: "🕒",
       title: "Emergency",
       content: "Crisis Hotline: 988",
-      description: "24/7 immediate support"
+      description: "24/7 immediate support",
+      link: "https://wa.me/917889831747"
     }
   ]
 
@@ -375,9 +379,12 @@ export default function Contact() {
             </h2>
 
             {contactInfo.map((info, index) => (
-              <motion.div
+              <motion.a
                 key={index}
-                className="bg-gradient-to-br from-[#1a1a2e]/80 to-[#16213e]/80 backdrop-blur-sm border border-[#F5F5F5]/10 rounded-2xl p-4 xs:p-6 relative overflow-hidden group"
+                href={info.link}
+                target={info.title === "Location" ? "_blank" : "_self"}
+                rel={info.title === "Location" ? "noopener noreferrer" : undefined}
+                className="block bg-gradient-to-br from-[#1a1a2e]/80 to-[#16213e]/80 backdrop-blur-sm border border-[#F5F5F5]/10 rounded-2xl p-4 xs:p-6 relative overflow-hidden group cursor-pointer"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
@@ -408,7 +415,7 @@ export default function Contact() {
                 <motion.div 
                   className="absolute inset-0 bg-gradient-to-r from-[#FF5DA2]/5 to-[#00A6FB]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 />
-              </motion.div>
+              </motion.a>
             ))}
           </motion.div>
         </div>

@@ -23,28 +23,16 @@ export async function POST(request) {
       )
     }
 
-    // Create transporter (using Gmail as example)
-    // You'll need to set up environment variables
-    const transporter = nodemailer.createTransporter({
-      service: 'gmail', // or your email service
+    // Create transporter (using Gmail SMTP as example)
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
       auth: {
-        user: process.env.EMAIL_USER, // your email
-        pass: process.env.EMAIL_PASS, // your app password
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
       },
     })
 
-    // Alternative: Using SMTP settings
-    // const transporter = nodemailer.createTransporter({
-    //   host: process.env.SMTP_HOST,
-    //   port: process.env.SMTP_PORT,
-    //   secure: process.env.SMTP_SECURE === 'true',
-    //   auth: {
-    //     user: process.env.SMTP_USER,
-    //     pass: process.env.SMTP_PASS,
-    //   },
-    // })
-
-    // Email content
+    // Beautiful styled HTML email content for YOU
     const htmlContent = `
       <!DOCTYPE html>
       <html lang="en">
@@ -54,72 +42,79 @@ export async function POST(request) {
         <title>New Contact Form Submission</title>
         <style>
           body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.5;
             color: #333;
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
+            margin: 0;
+            padding: 10px;
             background-color: #f8f9fa;
+            -webkit-text-size-adjust: 100%;
           }
           .container {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            max-width: 100%;
           }
           .header {
             background: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
             text-align: center;
           }
           .header h1 {
             color: #D72638;
             margin: 0;
-            font-size: 28px;
+            font-size: 22px;
+            line-height: 1.2;
           }
           .content {
             background: white;
-            padding: 25px;
-            border-radius: 10px;
-            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
           }
           .field {
-            margin-bottom: 15px;
-            padding: 15px;
+            margin-bottom: 12px;
+            padding: 12px;
             background: #f8f9fa;
-            border-radius: 8px;
-            border-left: 4px solid #00A6FB;
+            border-radius: 6px;
+            border-left: 3px solid #00A6FB;
           }
           .field-label {
-            font-weight: bold;
+            font-weight: 600;
             color: #495057;
-            margin-bottom: 5px;
+            margin-bottom: 4px;
             display: block;
+            font-size: 14px;
           }
           .field-value {
             color: #212529;
             word-wrap: break-word;
+            font-size: 14px;
+            line-height: 1.4;
           }
           .message-field {
             border-left-color: #FF5DA2;
           }
           .footer {
             background: white;
-            padding: 20px;
-            border-radius: 10px;
+            padding: 15px;
+            border-radius: 8px;
             text-align: center;
             color: #6c757d;
+            font-size: 12px;
           }
           .priority {
             display: inline-block;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: bold;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 11px;
+            font-weight: 600;
             text-transform: uppercase;
+            margin-top: 8px;
           }
           .priority-emergency {
             background: #dc3545;
@@ -128,6 +123,13 @@ export async function POST(request) {
           .priority-normal {
             background: #28a745;
             color: white;
+          }
+          @media screen and (max-width: 480px) {
+            body { padding: 5px; }
+            .container { padding: 10px; }
+            .header, .content, .footer { padding: 12px; }
+            .field { padding: 10px; margin-bottom: 10px; }
+            .header h1 { font-size: 20px; }
           }
         </style>
       </head>
@@ -178,7 +180,7 @@ export async function POST(request) {
       </html>
     `
 
-    // Auto-reply to sender
+    // Beautiful auto-reply HTML for the USER
     const autoReplyHtml = `
       <!DOCTYPE html>
       <html lang="en">
@@ -188,61 +190,87 @@ export async function POST(request) {
         <title>Thank you for contacting Dr. Elena</title>
         <style>
           body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.5;
             color: #333;
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
+            margin: 0;
+            padding: 10px;
             background-color: #f8f9fa;
+            -webkit-text-size-adjust: 100%;
           }
           .container {
             background: linear-gradient(135deg, #00A6FB 0%, #FF5DA2 100%);
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            max-width: 100%;
           }
           .content {
             background: white;
-            padding: 30px;
-            border-radius: 10px;
+            padding: 20px;
+            border-radius: 8px;
             text-align: center;
           }
           .logo {
-            font-size: 48px;
-            margin-bottom: 20px;
+            font-size: 36px;
+            margin-bottom: 15px;
           }
           .title {
             color: #D72638;
-            font-size: 28px;
-            margin-bottom: 20px;
+            font-size: 24px;
+            margin-bottom: 15px;
+            line-height: 1.2;
           }
           .message {
             color: #495057;
-            margin-bottom: 25px;
-            line-height: 1.7;
+            margin-bottom: 20px;
+            line-height: 1.5;
+            font-size: 14px;
+            text-align: left;
           }
           .highlight {
             color: #FF5DA2;
-            font-weight: bold;
+            font-weight: 600;
           }
           .footer {
-            margin-top: 30px;
-            padding-top: 20px;
+            margin-top: 20px;
+            padding-top: 15px;
             border-top: 2px solid #e9ecef;
             color: #6c757d;
-            font-size: 14px;
+            font-size: 12px;
           }
           .emergency {
             background: #f8d7da;
             border: 2px solid #dc3545;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
           }
           .emergency h3 {
             color: #721c24;
-            margin-top: 0;
+            margin: 0 0 10px 0;
+            font-size: 16px;
+          }
+          .emergency p {
+            margin: 8px 0;
+            font-size: 13px;
+          }
+          ul {
+            padding-left: 20px;
+            margin: 10px 0;
+          }
+          li {
+            margin-bottom: 6px;
+            font-size: 14px;
+          }
+          @media screen and (max-width: 480px) {
+            body { padding: 5px; }
+            .container { padding: 10px; }
+            .content { padding: 15px; }
+            .title { font-size: 22px; }
+            .logo { font-size: 32px; }
+            .message { font-size: 13px; }
+            .emergency { padding: 12px; }
           }
         </style>
       </head>
@@ -287,7 +315,7 @@ export async function POST(request) {
       </html>
     `
 
-    // Send email to doctor
+    // Send email to YOU 
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
       to: process.env.DOCTOR_EMAIL || process.env.EMAIL_USER,
@@ -296,7 +324,7 @@ export async function POST(request) {
       replyTo: email,
     })
 
-    // Send auto-reply to user
+    //  auto-reply to USER
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
       to: email,
@@ -317,17 +345,3 @@ export async function POST(request) {
     )
   }
 }
-
-// Environment variables needed in .env.local:
-/*
-EMAIL_USER=your-email@gmail.com
-EMAIL_PASS=your-app-password
-DOCTOR_EMAIL=doctor@mindmastery.com (optional, defaults to EMAIL_USER)
-
-# Alternative SMTP settings (instead of Gmail):
-SMTP_HOST=smtp.your-provider.com
-SMTP_PORT=587
-SMTP_SECURE=false
-SMTP_USER=your-smtp-username
-SMTP_PASS=your-smtp-password
-*/
