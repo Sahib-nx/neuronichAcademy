@@ -167,7 +167,7 @@ export default function About() {
               <div className="w-64 h-64 xs:w-72 xs:h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-80 lg:h-80 xl:w-96 xl:h-96 bg-gradient-to-br from-[#D72638]/20 via-[#FF5DA2]/20 to-[#00A6FB]/20 rounded-3xl backdrop-blur-sm border border-[#F5F5F5]/10 flex items-center justify-center relative overflow-hidden">
                 {/* Placeholder for doctor image */}
                 <div className="w-full h-full bg-gradient-to-br from-[#FF5DA2]/30 to-[#00A6FB]/30 rounded-3xl flex items-center justify-center">
-                  <div className="text-6xl xs:text-7xl sm:text-8xl lg:text-9xl">👩‍⚕️</div>
+                  <div className="text-6xl xs:text-7xl sm:text-8xl lg:text-9xl"><Image src="/img2.png" width={400} height={400} alt='image' /></div>
                 </div>
                 
                 {/* Animated border */}
