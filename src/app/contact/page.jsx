@@ -89,20 +89,20 @@ export default function Contact() {
 
   const faqs = [
     {
-      question: "Do you accept insurance?",
-      answer: "Yes, I accept most major insurance plans. Please contact our office to verify your coverage."
+      question: "What is Neuroniche Academy?",
+      answer: "A mental health education and support initiative providing awareness, guidance, and care."
     },
     {
-      question: "What should I expect in my first session?",
-      answer: "The first session focuses on understanding your concerns, goals, and developing a personalized treatment plan."
+      question: "Who can seek help?",
+      answer: "Anyone facing stress, anxiety, depression, or mental health challenges."
     },
     {
-      question: "How long are therapy sessions?",
-      answer: "Standard sessions are 50 minutes. Initial consultations may be longer to thoroughly assess your needs."
+      question: "Do you offer emergency support?",
+      answer: "Yes, we provide immediate mental health assistance in urgent situations."
     },
     {
-      question: "Is everything confidential?",
-      answer: "Absolutely. All sessions are strictly confidential within the bounds of professional ethical guidelines."
+      question: "How can I connect?",
+      answer: "Through our website, social media, or direct contact with our support team."
     }
   ]
 

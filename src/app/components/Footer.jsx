@@ -55,11 +55,13 @@ export default function Footer() {
             viewport={{ once: true }}
           >
             <div className="flex items-center justify-center xs:justify-start space-x-3 mb-6">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-[#2A9D8F] to-[#E9C46A] rounded-full flex items-center justify-center shadow-lg shadow-[#2A9D8F]/25">
-                <span className="text-[#264653] font-bold text-lg">Dr</span>
-              </div>
+              
+                <span className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-[#2A9D8F] to-[#E9C46A] bg-clip-text text-transparent">
+                  Neurochi
+                </span>
+             
               <span className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-[#2A9D8F] to-[#E9C46A] bg-clip-text text-transparent">
-                Mind
+                Academy
               </span>
             </div>
             <p className="text-gray-200/80 mb-6 max-w-xs sm:max-w-sm mx-auto xs:mx-0">
@@ -78,7 +80,7 @@ export default function Footer() {
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 bg-gradient-to-r from-[#2A9D8F] to-[#E9C46A] bg-clip-text text-transparent">
+            <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 bg-gradient-to-r from-[#2A9D8F] to-[#E9C46A] bg-clip-text">
               Navigation
             </h3>
             <ul className="space-y-3">
@@ -112,7 +114,7 @@ export default function Footer() {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 bg-gradient-to-r from-[#E9C46A] to-[#F4A261] bg-clip-text text-transparent">
+            <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 bg-gradient-to-r from-[#E9C46A] to-[#F4A261] bg-clip-text">
               Stay Connected
             </h3>
             <p className="text-gray-300/80 mb-6">Receive peaceful insights and therapeutic guidance for mental wellness.</p>
@@ -169,7 +171,7 @@ export default function Footer() {
         </motion.div>
 
         {/* Bottom */}
-        <div className="flex flex-col lg:flex-row justify-between items-center text-gray-400 text-sm">
+        <div className="flex flex-col lg:flex-row justify-between items-center text-amber-100 text-sm">
           <p>© {new Date().getFullYear()} Dr. Mind Psychology. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 lg:mt-0">
             <Link href="#" className="hover:text-[#E9C46A]">Privacy</Link>

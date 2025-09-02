@@ -57,11 +57,11 @@ export default function Navbar() {
             whileTap={{ scale: 0.95 }}
           >
             <Link href="/" className="flex items-center space-x-1.5 xs:space-x-2">
-              <div className="w-6 h-6 xs:w-7 xs:h-7 sm:w-8 sm:h-8 bg-gradient-to-r from-[#2A9D8F] to-[#E9C46A] rounded-full flex items-center justify-center shadow-lg shadow-[#2A9D8F]/25">
-                <span className="text-[#264653] font-bold text-xs xs:text-sm sm:text-sm">Dr</span>
-              </div>
+              
+                <span className="text-base xs:text-lg sm:text-xl lg:text-xl font-bold bg-gradient-to-r from-[#2A9D8F] to-[#E9C46A] bg-clip-text text-transparent">Neurochi</span>
+            
               <span className="text-base xs:text-lg sm:text-xl lg:text-xl font-bold bg-gradient-to-r from-[#2A9D8F] to-[#E9C46A] bg-clip-text text-transparent">
-                Mind
+                Academy
               </span>
             </Link>
           </motion.div>

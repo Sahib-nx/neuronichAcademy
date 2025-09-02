@@ -44,17 +44,17 @@ export async function POST(request) {
           body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.5;
-            color: #333;
+            color: #264653;
             margin: 0;
             padding: 10px;
             background-color: #f8f9fa;
             -webkit-text-size-adjust: 100%;
           }
           .container {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #2A9D8F 0%, #264653 100%);
             padding: 15px;
             border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 20px rgba(38, 70, 83, 0.15);
             max-width: 100%;
           }
           .header {
@@ -63,66 +63,94 @@ export async function POST(request) {
             border-radius: 8px;
             margin-bottom: 15px;
             text-align: center;
+            border-top: 4px solid #E9C46A;
           }
           .header h1 {
-            color: #D72638;
+            color: #264653;
             margin: 0;
             font-size: 22px;
             line-height: 1.2;
+            font-weight: 700;
           }
           .content {
             background: white;
             padding: 15px;
             border-radius: 8px;
             margin-bottom: 15px;
+            box-shadow: 0 2px 8px rgba(38, 70, 83, 0.08);
           }
           .field {
             margin-bottom: 12px;
             padding: 12px;
-            background: #f8f9fa;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
             border-radius: 6px;
-            border-left: 3px solid #00A6FB;
+            border-left: 4px solid #2A9D8F;
+            transition: all 0.3s ease;
+          }
+          .field:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 3px 12px rgba(42, 157, 143, 0.1);
           }
           .field-label {
             font-weight: 600;
-            color: #495057;
+            color: #264653;
             margin-bottom: 4px;
             display: block;
             font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
           }
           .field-value {
-            color: #212529;
+            color: #264653;
             word-wrap: break-word;
             font-size: 14px;
             line-height: 1.4;
+            font-weight: 500;
           }
           .message-field {
-            border-left-color: #FF5DA2;
+            border-left-color: #E76F51;
+            background: linear-gradient(135deg, #fff5f5 0%, #fee2e2 100%);
+          }
+          .phone-field {
+            border-left-color: #F4A261;
+            background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+          }
+          .subject-field {
+            border-left-color: #E9C46A;
+            background: linear-gradient(135deg, #fffbeb 0%, #fde68a 100%);
           }
           .footer {
             background: white;
             padding: 15px;
             border-radius: 8px;
             text-align: center;
-            color: #6c757d;
+            color: #2A9D8F;
             font-size: 12px;
+            border-bottom: 4px solid #E9C46A;
           }
           .priority {
             display: inline-block;
-            padding: 6px 12px;
-            border-radius: 15px;
+            padding: 8px 16px;
+            border-radius: 20px;
             font-size: 11px;
-            font-weight: 600;
+            font-weight: 700;
             text-transform: uppercase;
             margin-top: 8px;
+            letter-spacing: 0.5px;
           }
           .priority-emergency {
-            background: #dc3545;
+            background: linear-gradient(135deg, #E76F51 0%, #dc2626 100%);
             color: white;
+            animation: pulse 2s infinite;
           }
           .priority-normal {
-            background: #28a745;
+            background: linear-gradient(135deg, #2A9D8F 0%, #059669 100%);
             color: white;
+          }
+          @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(231, 111, 81, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(231, 111, 81, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(231, 111, 81, 0); }
           }
           @media screen and (max-width: 480px) {
             body { padding: 5px; }
@@ -130,6 +158,7 @@ export async function POST(request) {
             .header, .content, .footer { padding: 12px; }
             .field { padding: 10px; margin-bottom: 10px; }
             .header h1 { font-size: 20px; }
+            .priority { padding: 6px 12px; font-size: 10px; }
           }
         </style>
       </head>
@@ -138,7 +167,7 @@ export async function POST(request) {
           <div class="header">
             <h1>🧠 New Contact Form Submission</h1>
             <span class="priority ${subject === 'emergency' ? 'priority-emergency' : 'priority-normal'}">
-              ${subject === 'emergency' ? 'URGENT - Emergency' : 'Normal Priority'}
+              ${subject === 'emergency' ? '🚨 URGENT - Emergency' : '✅ Normal Priority'}
             </span>
           </div>
           
@@ -154,13 +183,13 @@ export async function POST(request) {
             </div>
             
             ${phone ? `
-            <div class="field">
+            <div class="field phone-field">
               <span class="field-label">📞 Phone:</span>
               <div class="field-value">${phone}</div>
             </div>
             ` : ''}
             
-            <div class="field">
+            <div class="field subject-field">
               <span class="field-label">📋 Subject:</span>
               <div class="field-value">${subject}</div>
             </div>
@@ -172,7 +201,7 @@ export async function POST(request) {
           </div>
           
           <div class="footer">
-            <p>This email was sent from the Mind Mastery contact form.</p>
+            <p><strong>Mind Mastery Psychology Contact Form</strong></p>
             <p><em>Received at: ${new Date().toLocaleString()}</em></p>
           </div>
         </div>
@@ -192,17 +221,17 @@ export async function POST(request) {
           body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.5;
-            color: #333;
+            color: #264653;
             margin: 0;
             padding: 10px;
             background-color: #f8f9fa;
             -webkit-text-size-adjust: 100%;
           }
           .container {
-            background: linear-gradient(135deg, #00A6FB 0%, #FF5DA2 100%);
+            background: linear-gradient(135deg, #E9C46A 0%, #F4A261 50%, #E76F51 100%);
             padding: 15px;
             border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 20px rgba(38, 70, 83, 0.15);
             max-width: 100%;
           }
           .content {
@@ -210,58 +239,102 @@ export async function POST(request) {
             padding: 20px;
             border-radius: 8px;
             text-align: center;
+            box-shadow: 0 3px 15px rgba(38, 70, 83, 0.1);
           }
           .logo {
             font-size: 36px;
             margin-bottom: 15px;
+            animation: float 3s ease-in-out infinite;
           }
           .title {
-            color: #D72638;
+            color: #264653;
             font-size: 24px;
             margin-bottom: 15px;
             line-height: 1.2;
+            font-weight: 700;
           }
           .message {
-            color: #495057;
+            color: #264653;
             margin-bottom: 20px;
             line-height: 1.5;
             font-size: 14px;
             text-align: left;
           }
           .highlight {
-            color: #FF5DA2;
-            font-weight: 600;
+            color: #E76F51;
+            font-weight: 700;
+            background: linear-gradient(135deg, #E9C46A, #F4A261);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
           }
-          .footer {
-            margin-top: 20px;
-            padding-top: 15px;
-            border-top: 2px solid #e9ecef;
-            color: #6c757d;
-            font-size: 12px;
-          }
-          .emergency {
-            background: #f8d7da;
-            border: 2px solid #dc3545;
-            padding: 15px;
+          .steps-container {
+            background: linear-gradient(135deg, #f0fdfa 0%, #ecfdf5 100%);
             border-radius: 8px;
-            margin-top: 15px;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 4px solid #2A9D8F;
           }
-          .emergency h3 {
-            color: #721c24;
-            margin: 0 0 10px 0;
-            font-size: 16px;
-          }
-          .emergency p {
-            margin: 8px 0;
-            font-size: 13px;
+          .steps-title {
+            color: #2A9D8F;
+            font-weight: 700;
+            margin-bottom: 10px;
+            font-size: 15px;
           }
           ul {
             padding-left: 20px;
             margin: 10px 0;
           }
           li {
-            margin-bottom: 6px;
+            margin-bottom: 8px;
             font-size: 14px;
+            position: relative;
+          }
+          li::marker {
+            color: #2A9D8F;
+          }
+          .footer {
+            margin-top: 20px;
+            padding: 15px;
+            background: linear-gradient(135deg, #264653 0%, #2A9D8F 100%);
+            color: white;
+            border-radius: 8px;
+            font-size: 12px;
+          }
+          .footer strong {
+            color: #E9C46A;
+          }
+          .emergency {
+            background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+            border: 2px solid #E76F51;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            animation: urgentPulse 2s infinite;
+          }
+          .emergency h3 {
+            color: #E76F51;
+            margin: 0 0 10px 0;
+            font-size: 16px;
+            font-weight: 700;
+          }
+          .emergency p {
+            margin: 8px 0;
+            font-size: 13px;
+            color: #264653;
+          }
+          .emergency strong {
+            color: #E76F51;
+          }
+          @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+          }
+          @keyframes urgentPulse {
+            0% { box-shadow: 0 0 0 0 rgba(231, 111, 81, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(231, 111, 81, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(231, 111, 81, 0); }
           }
           @media screen and (max-width: 480px) {
             body { padding: 5px; }
@@ -271,6 +344,7 @@ export async function POST(request) {
             .logo { font-size: 32px; }
             .message { font-size: 13px; }
             .emergency { padding: 12px; }
+            .steps-container { padding: 12px; }
           }
         </style>
       </head>
@@ -281,17 +355,19 @@ export async function POST(request) {
             <h1 class="title">Thank You, ${name}!</h1>
             
             <div class="message">
-              <p>I've received your message regarding <span class="highlight">"${subject}"</span> and truly appreciate you reaching out.</p>
+              <p>I've received your message regarding <span class="highlight">"${subject}"</span> and truly appreciate you reaching out to Mind Mastery Psychology.</p>
               
-              <p>Your mental wellness journey is important to me, and I'm committed to providing you with the support and care you deserve.</p>
+              <p>Your mental wellness journey is important to me, and I'm committed to providing you with the personalized support and care you deserve.</p>
               
-              <p><strong>What happens next:</strong></p>
-              <ul style="text-align: left; display: inline-block;">
-                <li>I'll review your message carefully</li>
-                <li>You'll hear back from me within <span class="highlight">24 hours</span></li>
-                <li>We can schedule a consultation if appropriate</li>
-                <li>All communications remain strictly confidential</li>
-              </ul>
+              <div class="steps-container">
+                <div class="steps-title">What happens next:</div>
+                <ul style="text-align: left; display: block;">
+                  <li>I'll review your message with careful attention</li>
+                  <li>You'll receive a personal response within <span class="highlight">24 hours</span></li>
+                  <li>We can schedule a consultation if appropriate</li>
+                  <li>All communications remain strictly confidential</li>
+                </ul>
+              </div>
             </div>
             
             ${subject === 'emergency' ? `
@@ -299,15 +375,17 @@ export async function POST(request) {
               <h3>🚨 Important - Emergency Support</h3>
               <p><strong>If you're experiencing a mental health crisis, please don't wait for my response.</strong></p>
               <p>Call <strong>988</strong> for immediate crisis support or <strong>911</strong> for emergency services.</p>
+              <p>Your safety and wellbeing are the top priority.</p>
             </div>
             ` : ''}
             
             <div class="footer">
-              <p><strong>Dr. Elena Consciousness, Ph.D.</strong><br>
-              Licensed Clinical Psychologist<br>
-              📧 dr.elena@mindmastery.com | 📞 (555) 123-4567</p>
+              <p><strong>IdhreesBashir, Honours in Psychology</strong>
+              <br>Psychologist<br>
+              NeurochiAcademy</p>
+              <p>📧 rj.sufiidrees@gmail.com | 📞 +917889831747</p>
               
-              <p><em>This is an automated response. Please do not reply to this email directly.</em></p>
+              <p style="margin-top: 15px; opacity: 0.8;"><em>This is an automated response. Please do not reply to this email directly.</em></p>
             </div>
           </div>
         </div>
@@ -328,7 +406,7 @@ export async function POST(request) {
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
       to: email,
-      subject: "Thank you for contacting Dr. Elena - Mind Mastery Psychology",
+      subject: "Thank you for contacting IdreesBashir - NeurochiAcademy",
       html: autoReplyHtml,
     })
 

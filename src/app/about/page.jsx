@@ -6,10 +6,10 @@ import Image from 'next/image'
 export default function About() {
   const qualifications = [
     {
-      title: "Ph.D. in Clinical Psychology",
-      institution: "Stanford University",
-      year: "2018",
-      description: "Specialized in cognitive behavioral therapy and neuropsychology"
+      title: "Honours in Psychology",
+      institution: "Indira Gandhi National Open University",
+      year: "2021",
+      description: "Focused on scientific study of mind, behaviour, and research in psychology."
     },
     {
       title: "Clinical Psychologist",
@@ -20,7 +20,7 @@ export default function About() {
     {
       title: "Volunteer & Life Member",
       institution: "Indian Red Cross Society",
-      year: "2023 - Present",
+      year: "2023",
       description: "Volunteer, Trained First Aid Professional & Life Member. Certified in First Aid, equipped to provide immediate lifesaving assistance in emergency. Committed to humanitarian service through disaster relief, health drives and community."
     }
   ]
