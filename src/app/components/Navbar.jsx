@@ -58,7 +58,7 @@ export default function Navbar() {
           >
             <Link href="/" className="flex items-center space-x-1.5 xs:space-x-2">
               
-                <span className="text-base xs:text-lg sm:text-xl lg:text-xl font-bold bg-gradient-to-r from-[#2A9D8F] to-[#E9C46A] bg-clip-text text-transparent">Neurochi</span>
+                <span className="text-base xs:text-lg sm:text-xl lg:text-xl font-bold bg-gradient-to-r from-[#2A9D8F] to-[#E9C46A] bg-clip-text text-transparent">Neuroniche</span>
             
               <span className="text-base xs:text-lg sm:text-xl lg:text-xl font-bold bg-gradient-to-r from-[#2A9D8F] to-[#E9C46A] bg-clip-text text-transparent">
                 Academy

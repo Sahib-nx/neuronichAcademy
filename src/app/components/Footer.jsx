@@ -57,7 +57,7 @@ export default function Footer() {
             <div className="flex items-center justify-center xs:justify-start space-x-3 mb-6">
               
                 <span className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-[#2A9D8F] to-[#E9C46A] bg-clip-text text-transparent">
-                  Neurochi
+                  Neuroniche
                 </span>
              
               <span className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-[#2A9D8F] to-[#E9C46A] bg-clip-text text-transparent">

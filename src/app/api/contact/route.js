@@ -382,7 +382,7 @@ export async function POST(request) {
             <div class="footer">
               <p><strong>IdhreesBashir, Honours in Psychology</strong>
               <br>Psychologist<br>
-              NeurochiAcademy</p>
+              NeuronicheAcademy</p>
               <p>📧 rj.sufiidrees@gmail.com | 📞 +917889831747</p>
               
               <p style="margin-top: 15px; opacity: 0.8;"><em>This is an automated response. Please do not reply to this email directly.</em></p>
@@ -406,7 +406,7 @@ export async function POST(request) {
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
       to: email,
-      subject: "Thank you for contacting IdreesBashir - NeurochiAcademy",
+      subject: "Thank you for contacting IdreesBashir - NeuronicheAcademy",
       html: autoReplyHtml,
     })
 
